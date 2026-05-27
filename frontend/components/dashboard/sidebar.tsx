@@ -4,7 +4,7 @@ import {
   LayoutDashboard,
   Upload,
   List,
-  DollarSign,
+  BarChart3,
   MessageSquare,
   Receipt,
   ChevronLeft,
@@ -30,7 +30,7 @@ const navItems = [
   { id: "upload", label: "Tải hóa đơn", icon: Upload },
   { id: "history", label: "Lịch sử hóa đơn", icon: List },
   { id: "chat", label: "Trợ lý", icon: MessageSquare },
-  { id: "budget", label: "Ngân sách", icon: DollarSign },
+  { id: "reports", label: "Báo cáo", icon: BarChart3 },
 ]
 
 export function Sidebar({ activeItem, onNavigate, isCollapsed, onToggle, userName = "Người dùng", userEmail = "", onLogout }: SidebarProps) {
@@ -74,7 +74,7 @@ export function Sidebar({ activeItem, onNavigate, isCollapsed, onToggle, userNam
               key={item.id}
               onClick={() => onNavigate(item.id)}
               className={cn(
-                "flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors",
+                "flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-200",
                 isActive
                   ? "bg-sidebar-accent text-sidebar-accent-foreground"
                   : "text-sidebar-muted hover:bg-sidebar-accent/50 hover:text-sidebar-foreground"
